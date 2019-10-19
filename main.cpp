@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 // wykorzystuję przestrzeń std
 using namespace std;
 
@@ -29,9 +30,19 @@ void sizeOfType(){
     cout << "Bool size: " << sizeof(bool) << endl;
     cout << "String size: " << sizeof(string) << endl;
 }
+void constController(){
+    // wartość stała PI
+    // wartość zmienna r
+    const double PI = 3.14;
+    // modyfikacja wartości stałej
+    // PI = 3.15; -> błąd
+    double r = 5;
+    // Obicz pole koła
+    cout << "Result PI*r^2 = " <<  PI * pow(r,2) << endl;
+}
 
 int main() {
-    // wywołanie zawartości metody sizeOfType()
-    sizeOfType();
+    // wywołanie zawartości metody
+    constController();
     return 0;
 }
