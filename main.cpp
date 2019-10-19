@@ -164,13 +164,36 @@ void grades(){
     cout << "All grades: " << mathGrades[0] << "," << mathGrades[1] << "," << mathGrades[2] << "," << mathGrades[3] << "," << mathGrades[4] << endl;
     cout << "Add new grade: " << endl;
     cin >> mathGrades[5];
-    cout << "All grades: " << mathGrades[0] << "," << mathGrades[1] << "," << mathGrades[2] << "," << mathGrades[3] << "," << mathGrades[4]
-    << "," << mathGrades[5] << endl;
+    for(int i = 0; i < sizeof(mathGrades)/ sizeof(int); i++){
+        cout << mathGrades[i] << ", ";
+    }
     cout << "Last grade: " << mathGrades[(sizeof(mathGrades)/ sizeof(int)) - 1] << endl;
+}
+void mathGrades(){
+    int allMathGrades [3][3] =    {
+                                    {2,3},
+                                    {2,1},
+                                    {3,4}
+                                };
+    cout << "Student 0 has grades: " << allMathGrades[0][0] << ", " << allMathGrades[0][1] << endl;
+    cout << "Student 1 has grades: " << allMathGrades[1][0] << ", " << allMathGrades[1][1] << endl;
+    cout << "Student 2 has grades: " << allMathGrades[2][0] << ", " << allMathGrades[2][1] << endl;
+}
+void decimalToRoman(){
+    int index;
+    string toRoman [] = {"N/A","I","II","III","IV","V","VI","VII","VIII","IX"};
+    cout << "Input decimal digit: " << endl;
+    cin >> index;
+    if(index >= 0 && index <= 9) {
+        cout << index << " in roman notation: " << toRoman[index] << endl;
+    } else {
+        cout << "Out of bound" << endl;
+    }
+
 }
 
 int main() {
     // wywołanie zawartości metody
-    grades();
+    decimalToRoman();
     return 0;
 }
