@@ -107,9 +107,19 @@ void increment(){
     int a = 1, b = 2;
     cout << "Example: " << ((++a) - 1.)/((b--)*(a++)) << endl;
 }
+void logMeIn(){
+    string login, password;
+    cout << "Input login and password" << endl;
+    cin >> login >> password;
+    if(login == "admin" && password == "admin"){
+        cout << "logged" << endl;
+    } else {
+        cout << "bad credentials" << endl;
+    }
+}
 
 int main() {
     // wywołanie zawartości metody
-    increment();
+    logMeIn();
     return 0;
 }
