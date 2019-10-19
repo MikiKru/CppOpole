@@ -1,12 +1,16 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+//biblioteka zawierająca generatory liczb pseudolosowych
+#include <cstdlib>
+// bibloteka implementująca metody daty i czasu
+#include "time.h"
 
 // wykorzystuję przestrzeń std
 using namespace std;
 
 
-void cppIntro(){
+void cppIntro() {
     // deklaracja - rezerwacja pamięci
     int age;
     // przypisanie wartości do zadeklarowanej zmiennej
@@ -25,13 +29,14 @@ void cppIntro(){
     cout << "Witaj " << name << endl;
 }
 
-void sizeOfType(){
+void sizeOfType() {
     cout << "Int size: " << sizeof(int) << endl;
     cout << "Short size: " << sizeof(short) << endl;
     cout << "Bool size: " << sizeof(bool) << endl;
     cout << "String size: " << sizeof(string) << endl;
 }
-void constController(){
+
+void constController() {
     // wartość stała PI
     // wartość zmienna r
     const double PI = 3.14;
@@ -41,15 +46,16 @@ void constController(){
     cout << "Input radius: " << endl;
     cin >> r;
     // Obicz pole koła
-    cout << "Result PI*r^2 = " <<  PI * pow(r,2) << endl;
+    cout << "Result PI*r^2 = " << PI * pow(r, 2) << endl;
 }
-void exerciseC1(){
+
+void exerciseC1() {
     string name, lastname, birthdate, possition;
     double salary_net;
     cout << "Input: name, lastname, date of birth (YYYY-MM-DD), possition, salary_net" << endl;
     cin >> name >> lastname >> birthdate >> possition >> salary_net;
     // instrukcja warunkowa
-    if(!cin.fail()){
+    if (!cin.fail()) {
         cout << "Name: " << name << endl;
         cout << "Lastname: " << lastname << endl;
         cout << "Date of birth: " << birthdate << endl;
@@ -59,85 +65,103 @@ void exerciseC1(){
         cout << "Upsss" << endl;
     }
 }
-void exerciseC2(){
+
+void exerciseC2() {
     int a, b, c;
     cout << "Input three numbers: " << endl;
     cin >> a >> b >> c;
-    if(cin.fail()){
+    if (cin.fail()) {
         cout << "Invalid numbers " << endl;
-    } else{
+    } else {
         // konwersja rozszerzająca
-        double avg = ((double)a + b + c)/3;
+        double avg = ((double) a + b + c) / 3;
         // konwersja zawężająca
-        cout << "AVG: " << ((int)avg) << endl;
+        cout << "AVG: " << ((int) avg) << endl;
     }
 }
-void checkNumber(){
+
+void checkNumber() {
     int a = 5;
     // sprawdź czy a jest prarzyste
-    if(a % 2 == 0){
+    if (a % 2 == 0) {
         cout << "P" << endl;
     } else {
         cout << "NP" << endl;
     }
 }
-void assignNumberToIntervals(){
+
+void assignNumberToIntervals() {
     // I     liczby < 0
     // II    liczba = 0
     // III   liczby > 0
     int number = 0;
-    if(number < 0){
+    if (number < 0) {
         cout << "I lvl" << endl;
-    } else if (number == 0){
+    } else if (number == 0) {
         cout << "II lvl" << endl;
     } else {
         cout << "III lvl" << endl;
     }
 }
-void increment(){
+
+void increment() {
     int x = 2;
     int y = 3;
     // preinkrementacja -> najpierw zwiększ potem wypisz
-    cout <<"Aktualna x: " << ++x << endl;
-    cout <<"Po inkrementacji x: " << x << endl;
+    cout << "Aktualna x: " << ++x << endl;
+    cout << "Po inkrementacji x: " << x << endl;
     // postinkrementacja -> najpierw wypisz potem zwiększ
     cout << "Aktualna y: " << y++ << endl;
     cout << "Po inkrementacji: " << y << endl;
 
     int a = 1, b = 2;
-    cout << "Example: " << ((++a) - 1.)/((b--)*(a++)) << endl;
+    cout << "Example: " << ((++a) - 1.) / ((b--) * (a++)) << endl;
 }
-void logMeIn(){
+
+void logMeIn() {
     string login, password;
     cout << "Input login and password" << endl;
     cin >> login >> password;
-    if(login == "admin" && password == "admin"){
+    if (login == "admin" && password == "admin") {
         cout << "logged" << endl;
     } else {
         cout << "bad credentials" << endl;
     }
 }
-void roundVsConvert(){
+
+void roundVsConvert() {
     double x = 45.99999;
     // rzutowanie
     cout << (int) x << endl;
     // zaokrąglanie math
-    cout <<  round(x) << endl;
+    cout << round(x) << endl;
 }
-void calculateBMI(){
+
+void exerciseC5() {
     int w, h;
     cout << "Input weight [kg] & height [cm]" << endl;
     cin >> w >> h;
-    double bmi = w / pow(h/100.,2);
+    float bmi = w / pow(h / 100., 2);
 
-    cout <<"Math round: " << round(bmi) << endl;
+    cout << "Math round: " << round(bmi) << endl;
     cout.precision(3);
     cout << "Precision XX.X: " << bmi << endl;
-    cout << "BMI precision: " <<  sizeof(bmi) << endl;
+    cout << "BMI precision: " << sizeof(bmi) << endl;
+}
+
+void exerciseC6() {
+    // umożliwia losowanie za każdym razem nowej wartości
+    srand(time(NULL));
+    int generated = 0;
+    while (generated != 49) {
+    generated = ((rand() % 49) + 1);
+    cout << generated << endl;
+    }
+    cout << "Jest!!!" << generated << endl;
 }
 
 int main() {
     // wywołanie zawartości metody
-    calculateBMI();
+    exerciseC6();
     return 0;
 }
