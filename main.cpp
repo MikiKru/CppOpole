@@ -72,9 +72,44 @@ void exerciseC2(){
         cout << "AVG: " << ((int)avg) << endl;
     }
 }
+void checkNumber(){
+    int a = 5;
+    // sprawdź czy a jest prarzyste
+    if(a % 2 == 0){
+        cout << "P" << endl;
+    } else {
+        cout << "NP" << endl;
+    }
+}
+void assignNumberToIntervals(){
+    // I     liczby < 0
+    // II    liczba = 0
+    // III   liczby > 0
+    int number = 0;
+    if(number < 0){
+        cout << "I lvl" << endl;
+    } else if (number == 0){
+        cout << "II lvl" << endl;
+    } else {
+        cout << "III lvl" << endl;
+    }
+}
+void increment(){
+    int x = 2;
+    int y = 3;
+    // preinkrementacja -> najpierw zwiększ potem wypisz
+    cout <<"Aktualna x: " << ++x << endl;
+    cout <<"Po inkrementacji x: " << x << endl;
+    // postinkrementacja -> najpierw wypisz potem zwiększ
+    cout << "Aktualna y: " << y++ << endl;
+    cout << "Po inkrementacji: " << y << endl;
+
+    int a = 1, b = 2;
+    cout << "Example: " << ((++a) - 1.)/((b--)*(a++)) << endl;
+}
 
 int main() {
     // wywołanie zawartości metody
-    exerciseC2();
+    increment();
     return 0;
 }
