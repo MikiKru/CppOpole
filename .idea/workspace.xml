@@ -14,8 +14,9 @@
     <list default="true" id="bac18018-e89c-460b-b0fd-ae6fd42f082f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppOpole1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppOpole1.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppOpole1.dir/main.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppOpole1.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CppOpole1.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CppOpole1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CppOpole1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CppOpole1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CppOpole1.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CppOpole1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CppOpole1.pdb" afterDir="false" />
@@ -70,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571467720725</updated>
-      <workItem from="1571467723242" duration="6159000" />
+      <workItem from="1571467723242" duration="7606000" />
     </task>
     <servers />
   </component>

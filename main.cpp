@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+
 // wykorzystuję przestrzeń std
 using namespace std;
 
@@ -36,13 +37,27 @@ void constController(){
     const double PI = 3.14;
     // modyfikacja wartości stałej
     // PI = 3.15; -> błąd
-    double r = 5;
+    double r;
+    cout << "Input radius: " << endl;
+    cin >> r;
     // Obicz pole koła
     cout << "Result PI*r^2 = " <<  PI * pow(r,2) << endl;
+}
+void exerciseC1(){
+    string name, lastname, birthdate, possition;
+    double salary_net;
+    cout << "Input: name, lastname, date of birth (YYYY-MM-DD), possition, salary_net" << endl;
+    cin >> name >> lastname >> birthdate >> possition >> salary_net;
+
+    cout << "Name: " << name << endl;
+    cout << "Lastname: " << lastname << endl;
+    cout << "Date of birth: " << birthdate << endl;
+    cout << "Possition: " << possition << endl;
+    cout << "Salary (net / gross): " << salary_net << " PLN" << " / " << salary_net * 1.23 << " PLN" <<  endl;
 }
 
 int main() {
     // wywołanie zawartości metody
-    constController();
+    exerciseC1();
     return 0;
 }
