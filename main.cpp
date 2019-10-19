@@ -159,9 +159,18 @@ void exerciseC6() {
     }
     cout << "Jest!!!" << generated << endl;
 }
+void grades(){
+    int mathGrades [6] = {2,1,4,3,5};
+    cout << "All grades: " << mathGrades[0] << "," << mathGrades[1] << "," << mathGrades[2] << "," << mathGrades[3] << "," << mathGrades[4] << endl;
+    cout << "Add new grade: " << endl;
+    cin >> mathGrades[5];
+    cout << "All grades: " << mathGrades[0] << "," << mathGrades[1] << "," << mathGrades[2] << "," << mathGrades[3] << "," << mathGrades[4]
+    << "," << mathGrades[5] << endl;
+    cout << "Last grade: " << mathGrades[(sizeof(mathGrades)/ sizeof(int)) - 1] << endl;
+}
 
 int main() {
     // wywołanie zawartości metody
-    exerciseC6();
+    grades();
     return 0;
 }
