@@ -117,9 +117,27 @@ void logMeIn(){
         cout << "bad credentials" << endl;
     }
 }
+void roundVsConvert(){
+    double x = 45.99999;
+    // rzutowanie
+    cout << (int) x << endl;
+    // zaokrąglanie math
+    cout <<  round(x) << endl;
+}
+void calculateBMI(){
+    int w, h;
+    cout << "Input weight [kg] & height [cm]" << endl;
+    cin >> w >> h;
+    double bmi = w / pow(h/100.,2);
+
+    cout <<"Math round: " << round(bmi) << endl;
+    cout.precision(3);
+    cout << "Precision XX.X: " << bmi << endl;
+    cout << "BMI precision: " <<  sizeof(bmi) << endl;
+}
 
 int main() {
     // wywołanie zawartości metody
-    logMeIn();
+    calculateBMI();
     return 0;
 }
