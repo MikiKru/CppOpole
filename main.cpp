@@ -3,7 +3,8 @@
 // wykorzystuję przestrzeń std
 using namespace std;
 
-int main() {
+
+void cppIntro(){
     // deklaracja - rezerwacja pamięci
     int age;
     // przypisanie wartości do zadeklarowanej zmiennej
@@ -20,5 +21,17 @@ int main() {
     // deklaracja i przypisanie
     string name = "Michal";
     cout << "Witaj " << name << endl;
+}
+
+void sizeOfType(){
+    cout << "Int size: " << sizeof(int) << endl;
+    cout << "Short size: " << sizeof(short) << endl;
+    cout << "Bool size: " << sizeof(bool) << endl;
+    cout << "String size: " << sizeof(string) << endl;
+}
+
+int main() {
+    // wywołanie zawartości metody sizeOfType()
+    sizeOfType();
     return 0;
 }
