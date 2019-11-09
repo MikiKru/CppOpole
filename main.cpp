@@ -380,9 +380,33 @@ void ex15(){
     }
 
 }
+
+void ex17(){
+    int tab [20];
+    // pętla wpisująca wartości do tablicy
+    srand(time(NULL));
+    for (int i = 0; i < sizeof(tab)/ sizeof(int); i++) {
+        tab[i] = (rand() % 10) + 1;
+        cout << tab[i] << " ";
+    }
+    cout << endl;
+    // sprawdzenie jaka jest liczebność poszczególnych wartości
+    // iteruje po liczbach od 1 do 10
+    for (int j = 1; j <= 10; j++) {
+        int counter = 0;
+        // zlicza częstotliwość wystepowania liczb od 1 do 10 wystepujących w tablicy tab
+        for (int i = 0; i < sizeof(tab)/ sizeof(int); i++) {
+            if(tab[i] == j){
+                counter++;
+            }
+        }
+        cout << "Element " << j << " wystapil " << counter << " razy" << endl;
+    }
+}
+
 int main() {
     // wywołanie zawartości metody
-    ex15();
+    ex17();
     return 0;
 }
 
