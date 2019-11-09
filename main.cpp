@@ -223,22 +223,26 @@ void switchCalc(){
     cout << "Podaj druga liczbe: " << endl;
     cin >> num2;
     // switch - case
-    switch(sign){
-        case '+':
-            cout << "Wynik dodawania: " << (num1 + num2) << endl;
-            break;
-        case '-':
-            cout << "Wynik odejmowania: " << (num1 - num2) << endl;
-            break;
-        case '*':
-            cout << "Wynik mnozenia: " << (num1 * num2) << endl;
-            break;
-        case '/':
-            cout << "Wynik dzielenia: " << ((double)num1 / num2) << endl;
-            break;
-        default:
-            cout << "Bledny operator" << endl;
-            break;
+    if(!cin.fail()) {
+        switch (sign) {
+            case '+':
+                cout << "Wynik dodawania: " << (num1 + num2) << endl;
+                break;
+            case '-':
+                cout << "Wynik odejmowania: " << (num1 - num2) << endl;
+                break;
+            case '*':
+                cout << "Wynik mnozenia: " << (num1 * num2) << endl;
+                break;
+            case '/':
+                cout << "Wynik dzielenia: " << ((double) num1 / num2) << endl;
+                break;
+            default:
+                cout << "Bledny operator" << endl;
+                break;
+        }
+    } else {
+        cout << "bladne dane" << endl;
     }
 }
 int main() {
