@@ -325,11 +325,28 @@ void x12() {
     }
 
 }
+void multiArrayBlog(){
+    string blog [3][3] =  {
+                            {"Komputery", "Spanie", "Jedzenie"},
+                            {"...", "???", "!!!"},
+                            {"Kuba", "Kaja", "Kaja"}
+                        };
+    // wypisz zawartość tablicy wielowymiarowej
+    cout<<"Typy postow: "<<endl;
+    int blogDimension = (sizeof(blog[0]) / sizeof(string));
 
+    for(int i=0; i<blogDimension; i++){
+        for(int j=0; j<blogDimension; j++){
+            cout<<blog[j][i] <<" ";
+        }
+        cout<<endl;
+    }
+
+}
 
 int main() {
     // wywołanie zawartości metody
-    x12();
+    multiArrayBlog();
     return 0;
 }
 
