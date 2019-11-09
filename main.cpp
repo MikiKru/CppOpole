@@ -154,58 +154,63 @@ void exerciseC6() {
     srand(time(NULL));
     int generated = 0;
     while (generated != 49) {
-    generated = ((rand() % 49) + 1);
-    cout << generated << endl;
+        generated = ((rand() % 49) + 1);
+        cout << generated << endl;
     }
     cout << "Jest!!!" << generated << endl;
 }
-void grades(){
-    int mathGrades [6] = {2,1,4,3,5};
-    cout << "All grades: " << mathGrades[0] << "," << mathGrades[1] << "," << mathGrades[2] << "," << mathGrades[3] << "," << mathGrades[4] << endl;
+
+void grades() {
+    int mathGrades[6] = {2, 1, 4, 3, 5};
+    cout << "All grades: " << mathGrades[0] << "," << mathGrades[1] << "," << mathGrades[2] << "," << mathGrades[3]
+         << "," << mathGrades[4] << endl;
     cout << "Add new grade: " << endl;
     cin >> mathGrades[5];
-    for(int i = 0; i < sizeof(mathGrades)/ sizeof(int); i++){
+    for (int i = 0; i < sizeof(mathGrades) / sizeof(int); i++) {
         cout << mathGrades[i] << ", ";
     }
-    cout << "Last grade: " << mathGrades[(sizeof(mathGrades)/ sizeof(int)) - 1] << endl;
+    cout << "Last grade: " << mathGrades[(sizeof(mathGrades) / sizeof(int)) - 1] << endl;
 }
-void mathGrades(){
-    int allMathGrades [3][3] =    {
-                                    {2,3},
-                                    {2,1},
-                                    {3,4}
-                                };
+
+void mathGrades() {
+    int allMathGrades[3][3] = {
+            {2, 3},
+            {2, 1},
+            {3, 4}
+    };
     cout << "Student 0 has grades: " << allMathGrades[0][0] << ", " << allMathGrades[0][1] << endl;
     cout << "Student 1 has grades: " << allMathGrades[1][0] << ", " << allMathGrades[1][1] << endl;
     cout << "Student 2 has grades: " << allMathGrades[2][0] << ", " << allMathGrades[2][1] << endl;
 }
-void decimalToRoman(){
+
+void decimalToRoman() {
     int index;
-    string toRoman [] = {"N/A","I","II","III","IV","V","VI","VII","VIII","IX"};
+    string toRoman[] = {"N/A", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
     cout << "Input decimal digit: " << endl;
     cin >> index;
-    if(index >= 0 && index <= 9) {
+    if (index >= 0 && index <= 9) {
         cout << index << " in roman notation: " << toRoman[index] << endl;
     } else {
         cout << "Out of bound" << endl;
     }
 
 }
+
 // W zależności od podanego wieku użytkownika odpowiednio zaklasyfikować jesgo dostęp do treści na stronie internetowej
 // -> jeżeli więk zawiera się w przedziale od 0 do 120 -> jaśteś człowiekiem
 //          --> jeżeli wiek < 18 --> nie jesteś pełnoletni
 //          --> jeśeli wiek >= 18 --> jesteś pełnoletni
 // -> w przeciwnym razie -> komunikat błędu
-void contentManager(){
+void contentManager() {
     cout << "Podaj swoj wiek" << endl;
     int user_age;
     cin >> user_age;
-    if(cin.fail()){
+    if (cin.fail()) {
         cout << "Blad typu danych" << endl;
-    } else if (user_age <= 0 || user_age >= 120){
+    } else if (user_age <= 0 || user_age >= 120) {
         cout << "Nie jestes czlowiekiem" << endl;
     } else {
-        if(user_age < 18){
+        if (user_age < 18) {
             cout << "Nie jestes pelnoletni" << endl;
         } else {
             cout << "Jestes czlowiekiem" << endl;
@@ -213,7 +218,8 @@ void contentManager(){
     }
 
 }
-void switchCalc(){
+
+void switchCalc() {
     int num1, num2;
     char sign;
     cout << "Podaj pierwsza liczbe: " << endl;
@@ -223,7 +229,7 @@ void switchCalc(){
     cout << "Podaj druga liczbe: " << endl;
     cin >> num2;
     // switch - case
-    if(!cin.fail()) {
+    if (!cin.fail()) {
         switch (sign) {
             case '+':
                 cout << "Wynik dodawania: " << (num1 + num2) << endl;
@@ -246,14 +252,26 @@ void switchCalc(){
         cout << "bladne dane" << endl;
     }
 }
-void getTipOfTheDay(){
+
+void getTipOfTheDay() {
     // lista tipów
-    string tips [] = {"A","B","C","D","E","F","G","H","I","J"};
+    string tips[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
     // losowanie
     srand(time(NULL));
-    int generatedIndex = rand() % ((sizeof(tips)/sizeof(string))- 1);
+    int generatedIndex = rand() % ((sizeof(tips) / sizeof(string)) - 1);
+    // Wypisanie całej zawartości tablicty za pomocą pętli
+    for (int i = 0; i < sizeof(tips) / sizeof(string); i++) {
+        if (tips[i] != "D") {
+            cout << "TIP " << (i + 1) << " = " << tips[i] << endl;
+        }
+    }
+//    for(string tip : tips){
+//        if(tip != "D") {
+//            cout << tip << endl;
+//        }
+//    }
     // publikacja
-    cout << tips[generatedIndex] << endl;
+    cout << "Wylosowane: " << tips[generatedIndex] << endl;
 }
 
 int main() {
