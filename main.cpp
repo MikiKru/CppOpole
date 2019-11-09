@@ -290,21 +290,16 @@ void generateGroups() {
     }
     // prezentacja
     for (int i = 0; i < sizeof(participants) / sizeof(string); i++) {
-        if (i % 2 == 0) {
-            if (i == 0 || i == 1) {
-                cout << "GRUPA 1 " << endl;
-            } else if (i == 2 || i == 3) {
-                cout << "GRUPA 2 " << endl;
-            } else if (i == 4 || i == 5) {
-                cout << "GRUPA 3 " << endl;
-            } else if (i == 6 || i == 7) {
-                cout << "GRUPA 4 " << endl;
-            } else if (i == 8 || i == 9) {
-                cout << "GRUPA 5 " << endl;
+            if (i == 0 || i == 1 || i == 2) {
+                cout << "GRUPA 1 " ;
+            } else if (i == 3 || i == 4 || i == 5) {
+                cout << "GRUPA 2 " ;
+            } else if (i == 6 || i == 7 || i == 8) {
+                cout << "GRUPA 3 " ;
             } else {
-                cout << "GRUPA 6 " << endl;
+                cout << "GRUPA 4 " ;
             }
-        }
+
         cout << participants[i] << endl;
     }
 }
@@ -346,7 +341,7 @@ void multiArrayBlog(){
 
 int main() {
     // wywołanie zawartości metody
-    multiArrayBlog();
+    generateGroups();
     return 0;
 }
 
