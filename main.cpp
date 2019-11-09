@@ -290,18 +290,20 @@ void generateGroups(){
     }
     // prezentacja
     for(int i = 0; i < sizeof(participants) / sizeof(string); i++){
-        if(i == 0 || i == 1){
-            cout << "GRUPA 1" << endl;
-        } else if(i == 2 || i == 3) {
-            cout << "GRUPA 2" << endl;
-        } else if (i == 4 || i == 5) {
-            cout << "GRUPA 3" << endl;
-        } else if (i == 6 || i == 7) {
-            cout << "GRUPA 4" << endl;
-        } else if (i == 8 || i == 9) {
-            cout << "GRUPA 5" << endl;
-        } else{
-            cout << "GRUPA 6" << endl;
+        if(i % 2 == 0) {
+            if (i == 0 || i == 1) {
+                cout << "GRUPA 1 " << endl;
+            } else if (i == 2 || i == 3) {
+                cout << "GRUPA 2 " << endl;
+            } else if (i == 4 || i == 5) {
+                cout << "GRUPA 3 " << endl;
+            } else if (i == 6 || i == 7) {
+                cout << "GRUPA 4 " << endl;
+            } else if (i == 8 || i == 9) {
+                cout << "GRUPA 5 " << endl;
+            } else {
+                cout << "GRUPA 6 " << endl;
+            }
         }
         cout << participants[i] << endl;
     }
