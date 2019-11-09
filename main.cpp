@@ -339,9 +339,36 @@ void multiArrayBlog(){
 
 }
 
+void ex14(){
+    int tab [] = {1,2,3,4,5,6,7,8,9};
+
+    for (int i = 0; i < sizeof(tab)/ sizeof(int); i= i+3) {
+        cout << tab[i] << endl;
+    }
+    int count = 0;
+    int sumGlobal = 0;
+    for (int i = 0; i < sizeof(tab)/ sizeof(int); i++) {
+        if(tab[i] % 2 == 0){
+            count++;
+        }
+        sumGlobal += tab[i];
+    }
+    cout << "Ilosc elementow parzystych: " << count << endl;
+    cout << "Suma wszystkich: " << sumGlobal << endl;
+    cout << "Srednia arytmetyczna: " << ((int)sumGlobal/ (sizeof(tab)/ sizeof(int))) << endl;
+
+    int find = 4;
+    for (int j = 0; j < sizeof(tab)/ sizeof(int); j++) {
+        if(tab[j] == find){
+            cout << "znaleziono: " << find << endl;
+            break;
+        }
+    }
+}
+
 int main() {
     // wywołanie zawartości metody
-    generateGroups();
+    ex14();
     return 0;
 }
 
