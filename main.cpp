@@ -235,6 +235,7 @@ void switchCalc(){
                 cout << "Wynik mnozenia: " << (num1 * num2) << endl;
                 break;
             case '/':
+            case '%':
                 cout << "Wynik dzielenia: " << ((double) num1 / num2) << endl;
                 break;
             default:
@@ -245,9 +246,19 @@ void switchCalc(){
         cout << "bladne dane" << endl;
     }
 }
+void getTipOfTheDay(){
+    // lista tipów
+    string tips [] = {"A","B","C","D","E","F","G","H","I","J"};
+    // losowanie
+    srand(time(NULL));
+    int generatedIndex = rand() % ((sizeof(tips)/sizeof(string))- 1);
+    // publikacja
+    cout << tips[generatedIndex] << endl;
+}
+
 int main() {
     // wywołanie zawartości metody
-    switchCalc();
+    getTipOfTheDay();
     return 0;
 }
 
