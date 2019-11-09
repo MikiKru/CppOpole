@@ -273,13 +273,13 @@ void getTipOfTheDay() {
     // publikacja
     cout << "Wylosowane: " << tips[generatedIndex] << endl;
 }
-void generateGroups(){
-    string participants [] = {"Weronika", "Kasia", "Kacper", "Konrad", "Julia", "Ala", "Kaja",
-                              "Maciek", "Kuba", "Sara", "Asia", "Dominika"};
-    string groupedParticipants [12];
+
+void generateGroups() {
+    string participants[] = {"Weronika", "Kasia", "Kacper", "Konrad", "Julia", "Ala", "Kaja",
+                             "Maciek", "Kuba", "Sara", "Asia", "Dominika"};
     srand(time(NULL));
     // tasowanie
-    for(int i =0; i < 100; i++){
+    for (int i = 0; i < 100; i++) {
         // losowanie indeksu do podmiany z indeksem zero -> pierwszym elementem
         int index = rand() % ((sizeof(participants) / sizeof(string)));
         // pobranie wartości, która ma być podmieniona -> żeby jej nie stracić
@@ -289,8 +289,8 @@ void generateGroups(){
         participants[0] = element;
     }
     // prezentacja
-    for(int i = 0; i < sizeof(participants) / sizeof(string); i++){
-        if(i % 2 == 0) {
+    for (int i = 0; i < sizeof(participants) / sizeof(string); i++) {
+        if (i % 2 == 0) {
             if (i == 0 || i == 1) {
                 cout << "GRUPA 1 " << endl;
             } else if (i == 2 || i == 3) {
@@ -308,9 +308,28 @@ void generateGroups(){
         cout << participants[i] << endl;
     }
 }
+
+void x12() {
+    cout << "Prosze podac liczbe" << endl;
+    int num;
+    cin >> num;
+    if (cin.fail()) {
+        cout << "Zly typ zmiennej!" << endl;
+    } else {
+        while (num >= 1) {
+            if (num % 2 == 1) {
+                cout << num << "^2=" <<pow(num,2) << endl;
+            }
+            num--;
+        }
+    }
+
+}
+
+
 int main() {
     // wywołanie zawartości metody
-    generateGroups();
+    x12();
     return 0;
 }
 
