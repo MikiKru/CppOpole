@@ -213,9 +213,40 @@ void contentManager(){
     }
 
 }
-
+void switchCalc(){
+    int num1, num2;
+    char sign;
+    cout << "Podaj pierwsza liczbe: " << endl;
+    cin >> num1;
+    cout << "Wybierz operator: (+,-,*,/) " << endl;
+    cin >> sign;
+    cout << "Podaj druga liczbe: " << endl;
+    cin >> num2;
+    // switch - case
+    switch(sign){
+        case '+':
+            cout << "Wynik dodawania: " << (num1 + num2) << endl;
+            break;
+        case '-':
+            cout << "Wynik odejmowania: " << (num1 - num2) << endl;
+            break;
+        case '*':
+            cout << "Wynik mnozenia: " << (num1 * num2) << endl;
+            break;
+        case '/':
+            cout << "Wynik dzielenia: " << ((double)num1 / num2) << endl;
+            break;
+        default:
+            cout << "Bledny operator" << endl;
+            break;
+    }
+}
 int main() {
     // wywołanie zawartości metody
-    contentManager();
+    switchCalc();
     return 0;
 }
+
+
+
+
