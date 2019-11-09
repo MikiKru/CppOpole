@@ -365,10 +365,24 @@ void ex14(){
         }
     }
 }
+void ex15(){
+    cout << "Podaj liczbe" << endl;
+    int num;
+    cin >> num;
+    if(!cin.fail()) {
+        for (int i = 1; i <= num; i++) {
+            if (i % 2 == 1) {
+                cout << i << endl;
+            }
+        }
+    } else {
+        cout << "BLAD!!!" << endl;
+    }
 
+}
 int main() {
     // wywołanie zawartości metody
-    ex14();
+    ex15();
     return 0;
 }
 
