@@ -191,9 +191,31 @@ void decimalToRoman(){
     }
 
 }
+// W zależności od podanego wieku użytkownika odpowiednio zaklasyfikować jesgo dostęp do treści na stronie internetowej
+// -> jeżeli więk zawiera się w przedziale od 0 do 120 -> jaśteś człowiekiem
+//          --> jeżeli wiek < 18 --> nie jesteś pełnoletni
+//          --> jeśeli wiek >= 18 --> jesteś pełnoletni
+// -> w przeciwnym razie -> komunikat błędu
+void contentManager(){
+    cout << "Podaj swoj wiek" << endl;
+    int user_age;
+    cin >> user_age;
+    if(cin.fail()){
+        cout << "Blad typu danych" << endl;
+    } else if (user_age <= 0 || user_age >= 120){
+        cout << "Nie jestes czlowiekiem" << endl;
+    } else {
+        if(user_age < 18){
+            cout << "Nie jestes pelnoletni" << endl;
+        } else {
+            cout << "Jestes czlowiekiem" << endl;
+        }
+    }
+
+}
 
 int main() {
     // wywołanie zawartości metody
-    decimalToRoman();
+    contentManager();
     return 0;
 }
