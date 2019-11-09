@@ -273,10 +273,42 @@ void getTipOfTheDay() {
     // publikacja
     cout << "Wylosowane: " << tips[generatedIndex] << endl;
 }
-
+void generateGroups(){
+    string participants [] = {"Weronika", "Kasia", "Kacper", "Konrad", "Julia", "Ala", "Kaja",
+                              "Maciek", "Kuba", "Sara", "Asia", "Dominika"};
+    string groupedParticipants [12];
+    srand(time(NULL));
+    // tasowanie
+    for(int i =0; i < 100; i++){
+        // losowanie indeksu do podmiany z indeksem zero -> pierwszym elementem
+        int index = rand() % ((sizeof(participants) / sizeof(string)));
+        // pobranie wartości, która ma być podmieniona -> żeby jej nie stracić
+        string element = participants[index];
+        // zamiana wartości indeks zerowy z wylosowanym
+        participants[index] = participants[0];
+        participants[0] = element;
+    }
+    // prezentacja
+    for(int i = 0; i < sizeof(participants) / sizeof(string); i++){
+        if(i == 0 || i == 1){
+            cout << "GRUPA 1" << endl;
+        } else if(i == 2 || i == 3) {
+            cout << "GRUPA 2" << endl;
+        } else if (i == 4 || i == 5) {
+            cout << "GRUPA 3" << endl;
+        } else if (i == 6 || i == 7) {
+            cout << "GRUPA 4" << endl;
+        } else if (i == 8 || i == 9) {
+            cout << "GRUPA 5" << endl;
+        } else{
+            cout << "GRUPA 6" << endl;
+        }
+        cout << participants[i] << endl;
+    }
+}
 int main() {
     // wywołanie zawartości metody
-    getTipOfTheDay();
+    generateGroups();
     return 0;
 }
 
