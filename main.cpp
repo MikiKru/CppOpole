@@ -290,15 +290,15 @@ void generateGroups() {
     }
     // prezentacja
     for (int i = 0; i < sizeof(participants) / sizeof(string); i++) {
-            if (i == 0 || i == 1 || i == 2) {
-                cout << "GRUPA 1 " ;
-            } else if (i == 3 || i == 4 || i == 5) {
-                cout << "GRUPA 2 " ;
-            } else if (i == 6 || i == 7 || i == 8) {
-                cout << "GRUPA 3 " ;
-            } else {
-                cout << "GRUPA 4 " ;
-            }
+        if (i == 0 || i == 1 || i == 2) {
+            cout << "GRUPA 1 ";
+        } else if (i == 3 || i == 4 || i == 5) {
+            cout << "GRUPA 2 ";
+        } else if (i == 6 || i == 7 || i == 8) {
+            cout << "GRUPA 3 ";
+        } else {
+            cout << "GRUPA 4 ";
+        }
 
         cout << participants[i] << endl;
     }
@@ -313,63 +313,65 @@ void x12() {
     } else {
         while (num >= 1) {
             if (num % 2 == 1) {
-                cout << num << "^2=" <<pow(num,2) << endl;
+                cout << num << "^2=" << pow(num, 2) << endl;
             }
             num--;
         }
     }
 
 }
-void multiArrayBlog(){
-    string blog [3][3] =  {
-                            {"Komputery", "Spanie", "Jedzenie"},
-                            {"...", "???", "!!!"},
-                            {"Kuba", "Kaja", "Kaja"}
-                        };
+
+void multiArrayBlog() {
+    string blog[3][3] = {
+            {"Komputery", "Spanie", "Jedzenie"},
+            {"...",       "???",    "!!!"},
+            {"Kuba",      "Kaja",   "Kaja"}
+    };
     // wypisz zawartość tablicy wielowymiarowej
-    cout<<"Typy postow: "<<endl;
+    cout << "Typy postow: " << endl;
     int blogDimension = (sizeof(blog[0]) / sizeof(string));
 
-    for(int i=0; i<blogDimension; i++){
-        for(int j=0; j<blogDimension; j++){
-            cout<<blog[j][i] <<" ";
+    for (int i = 0; i < blogDimension; i++) {
+        for (int j = 0; j < blogDimension; j++) {
+            cout << blog[j][i] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
 }
 
-void ex14(){
-    int tab [] = {1,2,3,4,5,6,7,8,9};
+void ex14() {
+    int tab[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    for (int i = 0; i < sizeof(tab)/ sizeof(int); i= i+3) {
+    for (int i = 0; i < sizeof(tab) / sizeof(int); i = i + 3) {
         cout << tab[i] << endl;
     }
     int count = 0;
     int sumGlobal = 0;
-    for (int i = 0; i < sizeof(tab)/ sizeof(int); i++) {
-        if(tab[i] % 2 == 0){
+    for (int i = 0; i < sizeof(tab) / sizeof(int); i++) {
+        if (tab[i] % 2 == 0) {
             count++;
         }
         sumGlobal += tab[i];
     }
     cout << "Ilosc elementow parzystych: " << count << endl;
     cout << "Suma wszystkich: " << sumGlobal << endl;
-    cout << "Srednia arytmetyczna: " << ((int)sumGlobal/ (sizeof(tab)/ sizeof(int))) << endl;
+    cout << "Srednia arytmetyczna: " << ((int) sumGlobal / (sizeof(tab) / sizeof(int))) << endl;
 
     int find = 4;
-    for (int j = 0; j < sizeof(tab)/ sizeof(int); j++) {
-        if(tab[j] == find){
+    for (int j = 0; j < sizeof(tab) / sizeof(int); j++) {
+        if (tab[j] == find) {
             cout << "znaleziono: " << find << endl;
             break;
         }
     }
 }
-void ex15(){
+
+void ex15() {
     cout << "Podaj liczbe" << endl;
     int num;
     cin >> num;
-    if(!cin.fail()) {
+    if (!cin.fail()) {
         for (int i = 1; i <= num; i++) {
             if (i % 2 == 1) {
                 cout << i << endl;
@@ -381,11 +383,11 @@ void ex15(){
 
 }
 
-void ex17(){
-    int tab [20];
+void ex17() {
+    int tab[20];
     // pętla wpisująca wartości do tablicy
     srand(time(NULL));
-    for (int i = 0; i < sizeof(tab)/ sizeof(int); i++) {
+    for (int i = 0; i < sizeof(tab) / sizeof(int); i++) {
         tab[i] = (rand() % 10) + 1;
         cout << tab[i] << " ";
     }
@@ -395,17 +397,18 @@ void ex17(){
     for (int j = 1; j <= 10; j++) {
         int counter = 0;
         // zlicza częstotliwość wystepowania liczb od 1 do 10 wystepujących w tablicy tab
-        for (int i = 0; i < sizeof(tab)/ sizeof(int); i++) {
-            if(tab[i] == j){
+        for (int i = 0; i < sizeof(tab) / sizeof(int); i++) {
+            if (tab[i] == j) {
                 counter++;
             }
         }
         cout << "Element " << j << " wystapil " << counter << " razy" << endl;
     }
 }
-void ex18(){
+
+void ex18() {
     // deklaracja macierzy
-    int matrix [5][5];
+    int matrix[5][5];
     // uzupełnienie macierzy wartościami losowymi z zakresu -5 do 5
     srand(time(NULL));
     for (int row = 0; row < 5; row++) {
@@ -426,10 +429,10 @@ void ex18(){
         int max = matrix[row][0];
         for (int column = 0; column < 5; column++) {
             // jeżeli aktualna komórka jest mniejsza niż min to zaktualizuj min
-            if(matrix[row][column] < min){
+            if (matrix[row][column] < min) {
                 min = matrix[row][column];
             }
-            if(matrix[row][column] > max){
+            if (matrix[row][column] > max) {
                 max = matrix[row][column];
             }
         }
@@ -442,24 +445,21 @@ void ex18(){
         int max = matrix[0][column];
         for (int row = 0; row < 5; row++) {
             // jeżeli aktualna komórka jest mniejsza niż min to zaktualizuj min
-            if(matrix[row][column] < min){
+            if (matrix[row][column] < min) {
                 min = matrix[row][column];
             }
-            if(matrix[row][column] > max){
+            if (matrix[row][column] > max) {
                 max = matrix[row][column];
             }
+            cout << "min in column " << column << " equals " << min << endl;
+            cout << "max in column " << column << " equals " << max << endl;
         }
-        cout << "min in column " << column << " equals " << min << endl;
-        cout << "max in column " << column << " equals " << max << endl;
     }
-
-
-}
-int main() {
-    // wywołanie zawartości metody
-    ex18();
-    return 0;
-}
+    int main() {
+        // wywołanie zawartości metody
+        ex18();
+        return 0;
+    }
 
 
 
