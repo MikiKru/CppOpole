@@ -437,7 +437,21 @@ void ex18(){
         cout << "max in row " << row << " equals " << max << endl;
     }
     // szukanie wartości min max w kolumnie
-    
+    for (int column = 0; column < 5; column++) {
+        int min = matrix[0][column];
+        int max = matrix[0][column];
+        for (int row = 0; row < 5; row++) {
+            // jeżeli aktualna komórka jest mniejsza niż min to zaktualizuj min
+            if(matrix[row][column] < min){
+                min = matrix[row][column];
+            }
+            if(matrix[row][column] > max){
+                max = matrix[row][column];
+            }
+        }
+        cout << "min in column " << column << " equals " << min << endl;
+        cout << "max in column " << column << " equals " << max << endl;
+    }
 
 
 }
