@@ -403,10 +403,47 @@ void ex17(){
         cout << "Element " << j << " wystapil " << counter << " razy" << endl;
     }
 }
+void ex18(){
+    // deklaracja macierzy
+    int matrix [5][5];
+    // uzupełnienie macierzy wartościami losowymi z zakresu -5 do 5
+    srand(time(NULL));
+    for (int row = 0; row < 5; row++) {
+        for (int column = 0; column < 5; column++) {
+            matrix[row][column] = (rand() % 11) - 5;
+        }
+    }
+    // wpyisanie zawartości macierzy
+    for (int row = 0; row < 5; row++) {
+        for (int column = 0; column < 5; column++) {
+            cout << matrix[row][column] << " ";
+        }
+        cout << endl;
+    }
+    // szukanie wartości min i max w wierszu
+    for (int row = 0; row < 5; row++) {
+        int min = matrix[row][0];
+        int max = matrix[row][0];
+        for (int column = 0; column < 5; column++) {
+            // jeżeli aktualna komórka jest mniejsza niż min to zaktualizuj min
+            if(matrix[row][column] < min){
+                min = matrix[row][column];
+            }
+            if(matrix[row][column] > max){
+                max = matrix[row][column];
+            }
+        }
+        cout << "min in row " << row << " equals " << min << endl;
+        cout << "max in row " << row << " equals " << max << endl;
+    }
+    // szukanie wartości min max w kolumnie
+    
 
+
+}
 int main() {
     // wywołanie zawartości metody
-    ex17();
+    ex18();
     return 0;
 }
 
