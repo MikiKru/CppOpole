@@ -455,6 +455,7 @@ void ex18() {
             cout << "max in column " << column << " equals " << max << endl;
         }
     }
+}
     int main() {
         // wywołanie zawartości metody
         ex18();
